@@ -4,7 +4,7 @@ from time import sleep
 # https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h
 
 # This script MUST be run as root
-
+# sudo python GameportJoystick.py
 
 class GameportJoystick:
   caps = {
