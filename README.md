@@ -14,10 +14,14 @@ Write an Arduino sketch that reads analog values from MIDI port, and send appror
 Need to decide on message format to send.
 
 ## On the Raspberry Pi side
-1. Create a virtual serial port using  python evdev library (uinput)
+1. Create a virtual input device using  python evdev library (uinput)
 2. Receive data from serial (USB) and send evdev events to Linux input subsystem
 3. Configure retropie to recognise the joystick.
 
+## Progress
+1. Can create virtual input device using Python library evdev. It shows up using evtest command, and the capabilities are also shown. 
+2. 
+3.
 
 
 
