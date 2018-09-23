@@ -14,7 +14,7 @@ Write an Arduino sketch that reads analog values from MIDI port, and send appror
 Need to decide on message format to send.
 
 ## On the Raspberry Pi side
-1. 
+1. Create a virtual serial port python evdev / uinput
 2. 
 3. 
 4. 
