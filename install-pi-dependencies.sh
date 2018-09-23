@@ -7,6 +7,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get install -y python-dev python-pip gcc linux-headers-$(uname -r)
+apt-get install -y python-dev python-pip gcc 
+#apt install -y linux-headers-$(uname -r)
 pip install evdev
 
