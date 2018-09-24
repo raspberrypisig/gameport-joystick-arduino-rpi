@@ -1,6 +1,6 @@
 
-void readAnalogPin(char *name, int pin) {
-  pinMode(pin, INPUT_PULLUP);
+void readAnalogPin(const char *name, int pin, int mode) {
+  pinMode(pin, mode);
   int data = analogRead(pin);
   Serial.print(name);
   Serial.print(":");
@@ -8,33 +8,28 @@ void readAnalogPin(char *name, int pin) {
   Serial.print("    ");  
 }
 
-void readButton1() {
-  readAnalogPin("button1", A0);
+void reportButton(const char *name, int pin) {
+  readAnalogPin(name, pin, INPUT);
 }
 
-void readButton2() {
-  readAnalogPin("button2", A1);
-}
-
-void readXAxis() {
-  readAnalogPin("x-axis", A2);
-}
-
-void readYAxis() {
-  readAnalogPin("y-axis", A3);
+void reportAxis(const char *name, int pin) {
+  readAnalogPin(name, pin, INPUT_PULLUP);
 }
 
 void setup() {
   Serial.begin(9600);
 }
 
-int data;
+const char fire_button[] = "Fire Button:";
+const char thumb_button[] = "Thumb Button:";
+const char x_axis[] = "X:";
+const char y_axis[] = "Y:";
 
 void loop() {
-  readButton1();
-  readButton2();
-  readXAxis();
-  readYAxis();
+  reportButton(fire_button, A0);
+  reportButton(thumb_button, A1);
+  reportAxis(x_axis, A2);
+  reportAxis(y_axis, A3);
   Serial.println();
   delay(200);
 }
