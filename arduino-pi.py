@@ -32,11 +32,11 @@ class ArduinoSerial:
 
     if command == 'x':
       print('x', value)
-      self.joystick.write(e.EV_ABS, e.ABS_X, value)
+      self.joystick.write(e.EV_ABS, e.ABS_HAT0X, value)
 
     elif command == 'y':
       print('y', value)
-      self.joystick.write(e.EV_ABS, e.ABS_Y, value)
+      self.joystick.write(e.EV_ABS, e.ABS_HAT0Y, value)
 
 
     elif command == 'a':
