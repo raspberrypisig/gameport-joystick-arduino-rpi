@@ -13,7 +13,10 @@ class GameportJoystick:
   ],
     e.EV_ABS: [
       (e.ABS_X, AbsInfo(value=0, min=0, max=1024, fuzz=0, flat=0, resolution=0)),
-      (e.ABS_Y, AbsInfo(value=0, min=0, max=1024, fuzz=0, flat=0, resolution=0))
+      (e.ABS_Y, AbsInfo(value=0, min=0, max=1024, fuzz=0, flat=0, resolution=0)),
+      (e.ABS_HAT0X, AbsInfo(value=0, min=-1, max=1, fuzz=0, flat=0, resolution=0)),
+      (e.ABS_HAT0Y, AbsInfo(value=0, min=-1, max=1, fuzz=0, flat=0, resolution=0))
+
   ],
   }
 
