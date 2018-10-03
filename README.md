@@ -27,7 +27,12 @@ so range of values between 0-1023). Set it to 0 to send actual codes to Raspberr
 #### Pi 
 
 1. Can create virtual input device using Python library evdev. It shows up using evtest command, and the capabilities are also shown. 
+2. Can get commands from Arduino using pyserial library.
+3. Can then pass on values to virtual joystick.
+4. Retropie sees it as a gamepad device.
 
+## Annoyances
+1. udev rules that I tested on linux mint didn't work on raspbian. I'm not the only one who came across this https://www.raspberrypi.org/forums/viewtopic.php?t=192123 . Solution is to comment out the last 7 lines of /lib/systemd/system/systemd-udevd.service or restart udev after bootup.
 
 
 
